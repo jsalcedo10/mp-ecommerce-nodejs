@@ -69,7 +69,7 @@ const createPreference = async ({ img, title, price }) => {
         back_urls,
         payment_methods,
         auto_return: 'approved',
-        notification_url: `${config.baseUrl}/notifications?source_news=webhooks`
+        notification_url: `${config.baseUrl}/checkout?source_news=webhooks`
     };
     global.id = await mercadopago.preferences.create(preference)
         .then(function (response) {
