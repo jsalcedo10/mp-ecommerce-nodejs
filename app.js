@@ -44,9 +44,7 @@ app.get('/failure', function (req, res) {
 });
 
 app.post('/checkout', function (req, res) {
-    console.log(req.params);
-    console.log(req.query);
-    console.log("Notification:", req.body)
+    console.log( req.body)
 
     res.status(200).json({ok:true});
 });
