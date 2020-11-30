@@ -1,3 +1,3 @@
-const baseUrl = 'https://jsalcedo10-mp-ecommerce-node.herokuapp.com'
+const baseUrl = 'https://jsalcedo10-mp-ecommerce.herokuapp.com'
 
 module.exports = { baseUrl }
