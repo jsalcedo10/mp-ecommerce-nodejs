@@ -2,12 +2,16 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 var port = process.env.PORT || 3000
 var {createPreference} = require('./mercadopago');
+const bodyParser = require('body-parser')
 
 var app = express();
+
+
+app.engine('handlebars', exphbs());
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json()) 
 
-app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.use(express.static('assets'));
